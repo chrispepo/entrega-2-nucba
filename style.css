@@ -1,7 +1,12 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@font-face {
+    font-family: 'titulo';
+    src: url(/fuentes/Bubblegum.ttf);
 }
 
 nav {
@@ -9,10 +14,10 @@ nav {
     align-items: center;
     justify-content: flex-end ;
     
-    background: rgb(189,210,230);
-    background: linear-gradient(90deg, rgba(189,210,230,1) 0%, rgba(255,255,255,1) 100%);
+    background: #f4ecd3;
     width: 100%;
-    height: 10vh;
+    height: 200px;
+    
 }
 
 .container {
@@ -33,6 +38,10 @@ button {
     
 }
 
+.menu {
+    position: absolute;
+}
+
 a {
     background-color:transparent ;
     text-decoration: none;
@@ -44,22 +53,19 @@ a {
 button :hover {
     color: #FFFFFF;
     transition: 0.8s all ease; 
-    background-color: #4C58F6;
+    background-color: #C3BBA7;
 }
 
 header { 
    height: 100vh;
    width: 100%;
    
-   background: rgb(189,210,230);
-   background: linear-gradient(90deg, rgba(189,210,230,1) 0%, rgba(255,255,255,1) 100%);
-
+   background: #f4ecd3;
+   
    border-bottom: 1px solid #aaa;
 }
 
-.menu {
-    position: fixed;
-}
+
 
 .hero {
     height: 100vh;
@@ -71,6 +77,7 @@ header {
    justify-content: center;
 
    box-sizing: border-box;
+   
 
 }
 
@@ -81,19 +88,21 @@ header {
 }
 
 .hero h1 b {
-    color: #4C58F6;
+    color: #E55A00;
+    font-family: 'titulo';
+    font-size: 3.4em;
 }
 
 .hero p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.1em;
+    font-size: 1.3em;
     color: black;
     font-weight: 100;
 }
 
 .hero button {
     margin-top: 50px;
-    background-color: #fff;
+    background-color: #E55A00;
     height: 50px;
     width: 300px;
 
@@ -104,24 +113,37 @@ header {
     font-size: 1.5em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 100;
+    color: #fff;
 }
 
 .hero button:hover {
     transform: scale(1.05,1.05);
-    background-color: #4C58F6;
+    background-color: #C3BBA7;
     color: #fff;
     transition: 0.8s;
 }
 
 .contain-hero {
+    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
+    animation-name: entra;
+    animation-duration: 4s;
+
 }
+
+@keyframes entra {
+    0% {position:relative;
+        top: -1000px;}
+    100% {position: relative;
+          top: 0px;}
+    }   
 
 .img {
     position: relative;
+    width: 40%;
     
 }
 
@@ -142,6 +164,150 @@ section {
 
     text-align: center;
     
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+
+    background-color: #46423a;
+}
+
+.primera-fila {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.segunda-fila {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.elemento {
+    border: #fff 1px solid;
+    border-radius: 4px;
+    background-color: #46423a;
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+    background-size: cover;
+    box-shadow: 2px 2px 2px #000;
+
+    color: #fff;
+}
+
+
+
+     
+
+
+.elemento:hover {
+    transform: scale(1.05,1.05);
+    transition: 0.8s;
+}
+
+.primera-fila .elemento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.primera-fila .elemento h3 {
+    margin: 40px;
+
+    font-size: 1.7em;
+}
+
+.primera-fila .elemento p {
+    margin: 40px;
+
+    font-size: 1.2em;
+
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+
+.primera-fila .elemento:first-child {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)) 
+    ,url(/img/121a6d2f-a34e-4cf4-951a-b86a910135d1.jfif);
+    border-radius: 4px;
+}
+
+.primera-fila .elemento:nth-child(2) {
+    background-image:linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)) 
+    , url(/img/Bodybuilder.jfif);
+    border-radius: 4px;
+}
+
+.primera-fila .elemento:nth-child(3) {
+    background-image:linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)) 
+    , url(/img/Fitness\ Care.jfif);
+    border-radius: 4px;
+}
+
+.titulo h3 {
+    text-align: center;
+}
+
+.segundo-titulo h3 {
+    text-align: center;
+}
+
+.segunda-fila .elemento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.segunda-fila .elemento h3 {
+    margin: 10px;
+
+    font-size: 1.7em;
+}
+
+.fa-solid {
+    color: #fff;
+    transform: scale(6,6);
+    position: relative;
+    bottom: 10%;
+}
+
+.titulo {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+.segundo-titulo h3 {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+aside {
+    height: 200px;
+    background-color: #f4ecd3;
+}
+
+.descripcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tex p {
+    margin-right: 10px;
+    text-align: center;
+    width: 100%;
+
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
