@@ -90,7 +90,7 @@ header {
 .hero h1 b {
     color: #E55A00;
     font-family: 'titulo';
-    font-size: 3.4em;
+    font-size: 2.8em;
 }
 
 .hero p {
@@ -273,7 +273,7 @@ main {
     font-size: 1.7em;
 }
 
-.fa-solid {
+.elemento .fa-solid {
     color: #fff;
     transform: scale(6,6);
     position: relative;
@@ -293,6 +293,7 @@ main {
 aside {
     height: 200px;
     background-color: #f4ecd3;
+    border-bottom: #000 solid 1px;
 }
 
 .descripcion {
@@ -309,6 +310,74 @@ aside {
     font-size: 1.3em;
     font-family: 'Times New Roman', Times, serif;
 }
+
+footer {
+    height: 60vh;
+    width: 100%;
+    background-color: #46423a;
+    
+
+}
+
+footer h2 {
+    font-size: 2.5em;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.contacto {
+    display: inline-block;
+    background-color: #f4ecd3;
+    padding: 100px 250px;
+    
+}
+
+.img-footer {
+    background-image: url(/img/Bodybuilder.jfif);
+    background-position: center;
+    background-size: cover;
+
+    display: inline-block;
+
+    background-color: aqua;
+    padding: 200px ;
+}
+
+.container-footer {
+    display: flex;
+    align-content: center;
+    justify-content:center ;
+
+    width: 100%;
+}
+
+.lista-footer .fa-solid {
+    padding-top: 25px;
+}
+
+.lista-footer .fa-regular {
+    padding-top: 25px;
+}
+
+.titulo-footer h3 {
+    font-size: 2.2em;
+    padding-bottom: 20px;
+}
+
+.lista-footer ul li p {
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+.lista-footer ul li {
+    display: flex;
+    justify-content: start;    
+}
+
+
+
+
 
 
 
